@@ -5,7 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "start": "webpack --mode development --watch",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "version": "npm version patch && git push && get push tags",
+    "deploy": "npm run build && git add . && git commit -m 'build' && npm run version"
   },
   "keywords": [],
   "author": "",

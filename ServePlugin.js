@@ -3,13 +3,15 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 
+let server = null;
+
 module.exports = class ServePugin {
   apply(compiler) {
     compiler.hooks.done.tap("Hello World Plugin", (
       stats /* stats is passed as an argument when done hook is tapped.  */
     ) => {
-      http
-        .createServer(function (req, res) {
+      if (server) {
+        server = http.createServer(function (req, res) {
           console.log("Fulfilling component request");
 
           const stream = fs.createReadStream(
@@ -30,8 +32,10 @@ module.exports = class ServePugin {
           });
 
           stream.pipe(res);
-        })
-        .listen(9999);
+        });
+
+        server.listen(9999);
+      }
 
       console.log("Serving component at http://localhost:9999");
     });
