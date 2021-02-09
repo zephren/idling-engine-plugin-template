@@ -6,8 +6,10 @@
   "scripts": {
     "start": "webpack --mode development --watch",
     "build": "webpack --mode production",
-    "deploy-full": "npm run build && (git commit -am 'build' || true) && npm version patch && git push && git push --tags",
-    "deploy": "npm run build && (git commit -am 'build' || true) && npm version prerelease --preid beta && git push && git push --tags"
+    "build-commit": "npm run build && (git commit -am 'build' || true)",
+    "deploy-full": "npm run build-commit && npm version patch && npm run push",
+    "deploy": "npm run build-commit && npm version prerelease --preid beta && npm run push",
+    "push": "git push && git push --tags"
   },
   "keywords": [],
   "author": "",
