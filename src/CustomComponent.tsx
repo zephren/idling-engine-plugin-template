@@ -5,9 +5,9 @@ import React from "react";
 import { Documentation } from "./Documentation";
 // import { documentation } from "../../../data/documentation";
 
-const { useSetupComponent } = window;
+const { useSetupComponent } = window as any;
 
-export const CustomText = ({ text, customStyleName }) => {
+export const CustomText = ({ text, customStyleName }: any) => {
   const { refFn, componentClassName } = useSetupComponent();
 
   // const style = useCustomStyle(
@@ -36,7 +36,7 @@ CustomText.craft = {
     text: "Text",
   },
   rules: {
-    canDrag: (node) => true,
+    canDrag: (node: any) => true,
   },
   // related: {
   //   settings: TextSettings,
@@ -56,15 +56,15 @@ CustomText.baseStyle = {
 
 CustomText.documentation = Documentation;
 
-CustomText.toolboxItem = (connectors) => {
+CustomText.toolboxItem = (connectors: any) => {
   return {
     name: "CustomText",
     component: CustomText,
-    ref: (ref) => connectors.create(ref, <CustomText />),
+    ref: (ref: any) => connectors.create(ref, <CustomText />),
   };
 };
 
-const { registerCustomComponent } = window;
+const { registerCustomComponent } = window as any;
 
 if (registerCustomComponent) {
   registerCustomComponent(CustomText);
