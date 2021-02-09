@@ -4,7 +4,7 @@ const md = `
 ## Properties
 
 ### text
-The text to show
+The text to show !
 
 `;
 
