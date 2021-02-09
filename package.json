@@ -1,12 +1,11 @@
 {
   "name": "idling-enging-plugin-template",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "src/index.js",
   "scripts": {
     "start": "webpack --mode development --watch",
     "build": "webpack --mode production",
-    "version": "npm version patch && git commit -am 'version' && git push && get push tags",
     "deploy": "npm run build && (git commit -am 'build' || true) && npm version patch"
   },
   "keywords": [],
