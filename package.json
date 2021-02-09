@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack --mode development --watch",
     "build": "webpack --mode production",
-    "deploy": "npm run build && (git commit -am 'build' || true) && npm version patch"
+    "deploy": "npm run build && (git commit -am 'build' || true) && npm version patch && git push && git push --tags"
   },
   "keywords": [],
   "author": "",
