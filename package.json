@@ -10,6 +10,7 @@
     "deploy-full": "npm run build-commit && npm version patch && npm run push",
     "deploy": "npm run build-commit && npm version prerelease --preid beta && npm run push",
     "push": "git push && git push --tags"
+    
   },
   "keywords": [],
   "author": "",

@@ -5,12 +5,12 @@ const path = require("path");
 
 let server = null;
 
-module.exports = class ServePugin {
+module.exports = class ServePlugin {
   apply(compiler) {
-    compiler.hooks.done.tap("Hello World Plugin", (
+    compiler.hooks.done.tap("Serve Plugin", (
       stats /* stats is passed as an argument when done hook is tapped.  */
     ) => {
-      if (server) {
+      if (!server) {
         server = http.createServer(function (req, res) {
           console.log("Fulfilling component request");
 

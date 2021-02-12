@@ -1,5 +1,5 @@
 const md = `
-# CustomText
+# PluginTemplate
 
 ## Properties
 

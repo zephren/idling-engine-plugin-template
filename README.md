@@ -10,9 +10,12 @@ Based on minimal-react-webpack-babel-setup.
 
 Add the plugin to your Idling Engine game.
 
-# Referencing your file
+You can use http://localhost:9999 to reference your plugin
 
-Example
+# Referencing your plugin
+
+You can reference the file by a branch (main being latest)
 `https://cdn.jsdelivr.net/gh/zephren/idling-engine-plugin-template@main/dist/bundle.min.js`
 
-Can also reference tagged versions
+You can also reference tagged versions (this is a beta version)
+https://cdn.jsdelivr.net/gh/zephren/idling-engine-plugin-template@1.1.1-beta.0/dist/bundle.min.js

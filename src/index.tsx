@@ -3,11 +3,10 @@ import React from "react";
 // import { TextSettings } from "./TextSettings";
 // import { StringSetting } from "../../Settings";
 import { Documentation } from "./Documentation";
-// import { documentation } from "../../../data/documentation";
 
 const { useSetupComponent } = window as any;
 
-export const CustomText = ({ text, customStyleName }: any) => {
+export const PluginTemplate = ({ text, customStyleName }: any) => {
   const { refFn, componentClassName } = useSetupComponent();
 
   // const style = useCustomStyle(
@@ -29,9 +28,9 @@ export const CustomText = ({ text, customStyleName }: any) => {
   // );
 };
 
-CustomText.componentName = "CustomText";
+PluginTemplate.componentName = "PluginTemplate";
 
-CustomText.craft = {
+PluginTemplate.craft = {
   props: {
     text: "Text",
   },
@@ -43,7 +42,7 @@ CustomText.craft = {
   // },
 };
 
-CustomText.baseStyle = {
+PluginTemplate.baseStyle = {
   margin: "0em",
 };
 
@@ -54,18 +53,18 @@ CustomText.baseStyle = {
 //   },
 // ];
 
-CustomText.documentation = Documentation;
+PluginTemplate.documentation = Documentation;
 
-CustomText.toolboxItem = (connectors: any) => {
+PluginTemplate.toolboxItem = (connectors: any) => {
   return {
-    name: "CustomText",
-    component: CustomText,
-    ref: (ref: any) => connectors.create(ref, <CustomText />),
+    name: "PluginTemplate",
+    component: PluginTemplate,
+    ref: (ref: any) => connectors.create(ref, <PluginTemplate />),
   };
 };
 
 const { registerCustomComponent } = window as any;
 
 if (registerCustomComponent) {
-  registerCustomComponent(CustomText);
+  registerCustomComponent(PluginTemplate);
 }
