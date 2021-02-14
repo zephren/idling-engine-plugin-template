@@ -15,7 +15,7 @@ export const PluginTemplate = ({ text, customStyleName }: any) => {
 
   return (
     <span ref={refFn} className={componentClassName}>
-      {text}!!!
+      THE TEXT: {text}
     </span>
   );
 };
