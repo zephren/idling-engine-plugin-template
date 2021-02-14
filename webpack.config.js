@@ -31,6 +31,10 @@ module.exports = (env, argv) => {
     resolve: {
       extensions: ["*", ".tsx", ".ts", ".js"],
     },
+    externals: {
+      "idling-engine-core": "idlingEngineCore",
+      "@craftjs/core": "craftjs",
+    },
     output: {
       path: path.resolve(__dirname, "./dist"),
       filename: outputFile,

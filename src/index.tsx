@@ -1,8 +1,6 @@
 import React from "react";
-// import { useSetupComponent } from "../../../config/useSetupComponent";
-// import { TextSettings } from "./TextSettings";
-// import { StringSetting } from "../../Settings";
 import { Documentation } from "./Documentation";
+import { ComponentSettings } from "./ComponentSettings";
 
 const { useSetupComponent } = window as any;
 
@@ -20,12 +18,6 @@ export const PluginTemplate = ({ text, customStyleName }: any) => {
       {text}!!!
     </span>
   );
-
-  // return (
-  //   <span ref={refFn} className={componentClassName} style={style}>
-  //     {text}
-  //   </span>
-  // );
 };
 
 PluginTemplate.componentName = "PluginTemplate";
@@ -37,16 +29,16 @@ PluginTemplate.craft = {
   rules: {
     canDrag: (node: any) => true,
   },
-  // related: {
-  //   settings: TextSettings,
-  // },
+  related: {
+    settings: ComponentSettings,
+  },
 };
 
 PluginTemplate.baseStyle = {
   margin: "0em",
 };
 
-// Text.styleProperties = [
+// PluginTemplate.styleProperties = [
 //   {
 //     property: "fontSize",
 //     type: StringSetting,

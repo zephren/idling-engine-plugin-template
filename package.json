@@ -1,5 +1,5 @@
 {
-  "name": "idling-enging-plugin-template",
+  "name": "idling-engine-plugin-template",
   "version": "1.1.1-beta.0",
   "description": "",
   "main": "src/index.js",
@@ -10,7 +10,6 @@
     "deploy-full": "npm run build-commit && npm version patch && npm run push",
     "deploy": "npm run build-commit && npm version prerelease --preid beta && npm run push",
     "push": "git push && git push --tags"
-    
   },
   "keywords": [],
   "author": "",
@@ -29,6 +28,8 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@craftjs/core": "0.1.0-beta.16",
+    "idling-engine-core": "^1.0.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   }

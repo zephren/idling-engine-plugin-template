@@ -1,6 +1,8 @@
 const md = `
 # PluginTemplate
 
+This is a template for a plugin with a sample component.
+
 ## Properties
 
 ### text
